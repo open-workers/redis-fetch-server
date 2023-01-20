@@ -1,6 +1,10 @@
-[![Build](https://img.shields.io/github/actions/workflow/status/open-workers/redis-fetch-server/build.yml?logo=deno&label=Package+build)](https://github.com/open-workers/redis-fetch-server/actions/workflows/build.yml)
+[github-license-url]: /LICENSE
+[action-docker-url]: https://github.com/open-workers/redis-fetch-server/actions/workflows/docker.yml
 
 # Redis fetch server
+
+[![License](https://img.shields.io/github/license/maxx-t/nginx-jwt-module.svg)][github-license-url]
+[![Build Status](https://github.com/open-workers/redis-fetch-server/actions/workflows/docker.yml/badge.svg)][action-docker-url]
 
 A simple server that interfaces Redis with HTTP
 

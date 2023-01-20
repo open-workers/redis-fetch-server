@@ -33,7 +33,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build server
-        id: docker_build_server
         uses: docker/build-push-action@v3
         with:
           push: ${{ github.event_name != 'pull_request' }}
