@@ -39,4 +39,4 @@ PORT=3000
 
 ## License
 
-This package is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+This package is licensed under the MIT License. See the [LICENSE][github-license-url] file for more details.
