@@ -19,8 +19,14 @@ deno run --allow-net --allow-env main.ts
 #### With docker
 
 ```bash
+docker pull ghcr.io/open-workers/redis-fetch-server:latest
+docker tag ghcr.io/open-workers/redis-fetch-server:latest redis-fetch-server
+# or
 docker build -t redis-fetch-server .
-docker run -p 3000:3000 -e REDIS_HOST=redis -e REDIS_PORT=6379 redis-fetch-server
+
+docker network create redis-fetch-net
+docker run --rm --net redis-fetch-net --name redis redis:alpine
+docker run --rm --net redis-fetch-net -p 3000:3000 -e REDIS_HOST=redis redis-fetch-server
 ```
 
 ## Environment variables
