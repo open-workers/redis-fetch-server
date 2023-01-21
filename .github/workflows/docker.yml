@@ -40,8 +40,7 @@ jobs:
       - name: Build server
         uses: docker/build-push-action@v3
         with:
-          # push: ${{ startsWith(github.event.ref, 'refs/tags/v') }}
-          push: true
+          push: ${{ startsWith(github.event.ref, 'refs/tags/v') }}
           tags: ${{ steps.metadata.outputs.tags }}
           cache-from: type=gha,scope=main
           cache-to: type=gha,mode=max,scope=main
