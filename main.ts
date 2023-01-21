@@ -79,8 +79,6 @@ async function handleRequest(request: Request): Promise<Response> {
             return new BadRequestResponse('Command must not be longer than 1024 characters');
           }
 
-          console.log('COMMAND', cmd);
-
           const [name, ...args] = cmd.split(' ');
 
           // Ensure command is allowed
@@ -91,7 +89,7 @@ async function handleRequest(request: Request): Promise<Response> {
 
           return redis
             .sendCommand(name, ...args)
-            .then((result) => (console.log(result), new JSONResponse({ error: false, result: result.value() })))
+            .then((result) => new JSONResponse({ error: false, result: result.value() }))
             .catch((err) => new JSONResponse({ error: true, result: err.message }));
         }
       }
