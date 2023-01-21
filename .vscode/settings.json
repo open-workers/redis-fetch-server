@@ -3,6 +3,7 @@
   "deno.lint": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "cSpell.words": [
-    "deno"
+    "deno",
+    "openworkers"
   ]
 }
